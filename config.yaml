@@ -53,6 +53,26 @@ activities:
       level_6: 0
       level_7: 0
       level_8: 0
+  # Weekly distance thresholds for the weekly total row
+  weekly_distance_levels:
+    Ride:
+      level_1: 50
+      level_2: 100
+      level_3: 150
+      level_4: 200
+      level_5: 250
+      level_6: 300
+      level_7: 400
+      level_8: 500
+    Run:
+      level_1: 15
+      level_2: 25
+      level_3: 40
+      level_4: 55
+      level_5: 70
+      level_6: 90
+      level_7: 120
+      level_8: 150
   type_aliases:
     TrailRun: Run
     VirtualRun: Run

@@ -238,6 +238,7 @@ def generate():
     activities_cfg = config.get("activities", {})
     types = activities_cfg.get("types", []) or []
     distance_levels = activities_cfg.get("distance_levels", {})
+    weekly_distance_levels = activities_cfg.get("weekly_distance_levels", {})
 
     units = config.get("units", {})
     units = {
@@ -273,6 +274,7 @@ def generate():
         "aggregates": aggregates.get("years", {}),
         "units": units,
         "distance_levels": distance_levels,
+        "weekly_distance_levels": weekly_distance_levels,
     }
     _write_site_data(site_payload)
 

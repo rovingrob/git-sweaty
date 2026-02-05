@@ -225,7 +225,7 @@ function buildSummary(payload, types, years, showTypeBreakdown, showActiveDays, 
   }
 }
 
-function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanceThresholds, options = {}) {
+function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanceThresholds, weeklyThresholds, options = {}) {
   const heatmapArea = document.createElement("div");
   heatmapArea.className = "heatmap-area";
 
@@ -390,7 +390,7 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
     weekCell.style.height = `${layout.cell}px`;
     const totals = weeklyTotals[w] || { count: 0, distance: 0, moving_time: 0, elevation: 0 };
     if (totals.count > 0) {
-      const level = distanceToLevel(totals.distance, distanceThresholds, units.distance);
+      const level = distanceToLevel(totals.distance, weeklyThresholds, units.distance);
       weekCell.style.background = colors[level];
       const distDisplay = formatDistance(totals.distance, units);
       const durationDisplay = formatDuration(totals.moving_time);
@@ -406,7 +406,7 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
   return heatmapArea;
 }
 
-function buildCard(type, year, aggregates, units, distanceLevels, options = {}) {
+function buildCard(type, year, aggregates, units, distanceLevels, weeklyDistanceLevels, options = {}) {
   const card = document.createElement("div");
   card.className = "card";
 
@@ -421,7 +421,8 @@ function buildCard(type, year, aggregates, units, distanceLevels, options = {}) 
   const colors = type === "all" ? DEFAULT_COLORS : getColors(type);
   const layout = getLayout();
   const thresholds = type === "all" ? {} : (distanceLevels?.[type] || {});
-  const heatmapArea = buildHeatmapArea(aggregates, year, units, colors, type, layout, thresholds, options);
+  const weeklyThresholds = type === "all" ? {} : (weeklyDistanceLevels?.[type] || {});
+  const heatmapArea = buildHeatmapArea(aggregates, year, units, colors, type, layout, thresholds, weeklyThresholds, options);
   body.appendChild(heatmapArea);
 
   const stats = document.createElement("div");
@@ -610,6 +611,7 @@ async function init() {
           aggregates,
           payload.units || { distance: "mi", elevation: "ft" },
           payload.distance_levels || {},
+          payload.weekly_distance_levels || {},
           { colorForEntry },
         );
         list.appendChild(card);
@@ -629,7 +631,7 @@ async function init() {
         list.className = "type-list";
         years.forEach((year) => {
           const aggregates = payload.aggregates?.[String(year)]?.[type] || {};
-          const card = buildCard(type, year, aggregates, payload.units || { distance: "mi", elevation: "ft" }, payload.distance_levels || {});
+          const card = buildCard(type, year, aggregates, payload.units || { distance: "mi", elevation: "ft" }, payload.distance_levels || {}, payload.weekly_distance_levels || {});
           list.appendChild(card);
         });
         if (!list.childElementCount) {
