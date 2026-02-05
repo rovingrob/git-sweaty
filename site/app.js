@@ -387,14 +387,17 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
     const weekCell = document.createElement("div");
     weekCell.className = "weekly-cell";
     weekCell.style.width = `${layout.cell}px`;
+    weekCell.style.height = `${layout.cell}px`;
     const totals = weeklyTotals[w] || { count: 0, distance: 0, moving_time: 0, elevation: 0 };
     if (totals.count > 0) {
+      const level = distanceToLevel(totals.distance, distanceThresholds, units.distance);
+      weekCell.style.background = colors[level];
       const distDisplay = formatDistance(totals.distance, units);
       const durationDisplay = formatDuration(totals.moving_time);
       const elevDisplay = formatElevation(totals.elevation, units);
-      const distKm = units.distance === "km" ? totals.distance / 1000 : totals.distance / 1609.344;
-      weekCell.textContent = Math.round(distKm);
-      weekCell.title = `${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+      weekCell.title = `Week Total\n${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+    } else {
+      weekCell.style.background = colors[0];
     }
     weeklyRow.appendChild(weekCell);
   }

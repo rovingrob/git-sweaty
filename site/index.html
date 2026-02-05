@@ -366,11 +366,13 @@
       }
 
       .weekly-cell {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 8px;
-        color: var(--muted);
-        text-align: center;
-        overflow: hidden;
+        border-radius: 3px;
+        background: #1f2937;
+        transition: box-shadow 0.15s ease, filter 0.15s ease;
+      }
+
+      .weekly-cell:hover {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95), 0 0 14px rgba(56, 189, 248, 0.75);
       }
 
       .tooltip {
@@ -505,6 +507,6 @@
 
     <div id="tooltip" class="tooltip"></div>
 
-    <script src="app.js?v=9"></script>
+    <script src="app.js?v=10"></script>
   </body>
 </html>
