@@ -4239,10 +4239,10 @@
   },
   "distance_levels": {
     "Ride": {
-      "level_1": 25,
-      "level_2": 50,
-      "level_3": 75,
-      "level_4": 100
+      "level_1": 15,
+      "level_2": 30,
+      "level_3": 45,
+      "level_4": 55
     },
     "Run": {
       "level_1": 3,
@@ -4257,7 +4257,7 @@
       "level_4": 0
     }
   },
-  "generated_at": "2026-02-05T03:54:02.330927+00:00",
+  "generated_at": "2026-02-05T04:10:29.629563+00:00",
   "types": [
     "Ride"
   ],
