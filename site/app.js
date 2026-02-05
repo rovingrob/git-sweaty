@@ -390,12 +390,34 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
     weekCell.style.height = `${layout.cell}px`;
     const totals = weeklyTotals[w] || { count: 0, distance: 0, moving_time: 0, elevation: 0 };
     if (totals.count > 0) {
-      const level = distanceToLevel(totals.distance, weeklyThresholds, units.distance);
-      weekCell.style.background = colors[level];
+      let weekColor;
+      if (typeof options.weeklyColorForEntry === "function") {
+        weekColor = options.weeklyColorForEntry(totals.distance);
+      } else {
+        const level = distanceToLevel(totals.distance, weeklyThresholds, units.distance);
+        weekColor = colors[level];
+      }
+      weekCell.style.background = weekColor;
       const distDisplay = formatDistance(totals.distance, units);
       const durationDisplay = formatDuration(totals.moving_time);
       const elevDisplay = formatElevation(totals.elevation, units);
-      weekCell.title = `Week Total\n${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+      const tooltipText = `Week Total\n${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+
+      if (!isTouch) {
+        weekCell.addEventListener("mouseenter", (event) => {
+          showTooltip(tooltipText, event.clientX, event.clientY);
+        });
+        weekCell.addEventListener("mousemove", (event) => {
+          showTooltip(tooltipText, event.clientX, event.clientY);
+        });
+        weekCell.addEventListener("mouseleave", hideTooltip);
+      } else {
+        weekCell.addEventListener("pointerdown", (event) => {
+          if (event.pointerType !== "touch") return;
+          event.preventDefault();
+          showTooltip(tooltipText, event.clientX, event.clientY);
+        });
+      }
     } else {
       weekCell.style.background = colors[0];
     }
@@ -605,6 +627,11 @@ async function init() {
           }
           return MULTI_TYPE_COLOR;
         };
+        const weeklyColorForEntry = (distance) => {
+          const thresholds = payload.weekly_distance_levels?.Ride || {};
+          const level = distanceToLevel(distance, thresholds, payload.units?.distance || "km");
+          return getColors("Ride")[level];
+        };
         const card = buildCard(
           "all",
           year,
@@ -612,7 +639,7 @@ async function init() {
           payload.units || { distance: "mi", elevation: "ft" },
           payload.distance_levels || {},
           payload.weekly_distance_levels || {},
-          { colorForEntry },
+          { colorForEntry, weeklyColorForEntry },
         );
         list.appendChild(card);
       });
