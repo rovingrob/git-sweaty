@@ -1,5 +1,6 @@
 {
-  "aggregates": {
+  "generated_at": "2026-02-05T04:38:41.458800+00:00",
+  "years": {
     "2010": {
       "Ride": {
         "2010-05-02": {
@@ -11390,86 +11391,5 @@
         }
       }
     }
-  },
-  "distance_levels": {
-    "Ride": {
-      "level_1": 10,
-      "level_2": 20,
-      "level_3": 30,
-      "level_4": 40,
-      "level_5": 50,
-      "level_6": 60,
-      "level_7": 80,
-      "level_8": 100
-    },
-    "Run": {
-      "level_1": 2,
-      "level_2": 4,
-      "level_3": 6,
-      "level_4": 8,
-      "level_5": 10,
-      "level_6": 15,
-      "level_7": 21,
-      "level_8": 42
-    },
-    "WeightTraining": {
-      "level_1": 0,
-      "level_2": 0,
-      "level_3": 0,
-      "level_4": 0,
-      "level_5": 0,
-      "level_6": 0,
-      "level_7": 0,
-      "level_8": 0
-    }
-  },
-  "generated_at": "2026-02-05T04:38:41.506991+00:00",
-  "types": [
-    "Ride"
-  ],
-  "units": {
-    "distance": "km",
-    "elevation": "m"
-  },
-  "weekly_distance_levels": {
-    "Ride": {
-      "level_1": 50,
-      "level_2": 100,
-      "level_3": 150,
-      "level_4": 200,
-      "level_5": 250,
-      "level_6": 300,
-      "level_7": 400,
-      "level_8": 500
-    },
-    "Run": {
-      "level_1": 15,
-      "level_2": 25,
-      "level_3": 40,
-      "level_4": 55,
-      "level_5": 70,
-      "level_6": 90,
-      "level_7": 120,
-      "level_8": 150
-    }
-  },
-  "years": [
-    2010,
-    2011,
-    2012,
-    2013,
-    2014,
-    2015,
-    2016,
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025,
-    2026
-  ]
+  }
 }
