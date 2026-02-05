@@ -23,7 +23,7 @@
 <text x="46" y="130" font-size="9" fill="#cbd5e1" font-family="Arial, sans-serif" text-anchor="end">Sun</text>
 <g transform="translate(52,36)">
 <rect x="0" y="0" width="12" height="12" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
-<rect x="0" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-01"><title>2019-01-01
+<rect x="0" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-01"><title>2019-01-01
 1 workout
 Distance: 6.90 km
 Duration: 22m
@@ -38,7 +38,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="0" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-04"><title>2019-01-04
+<rect x="0" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-04"><title>2019-01-04
 1 workout
 Distance: 19.18 km
 Duration: 1h 8m
@@ -48,37 +48,37 @@ Elevation: 50 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="0" y="84" width="12" height="12" fill="#05ffa1" stroke="#0f172a" stroke-width="1" data-date="2019-01-06"><title>2019-01-06
+<rect x="0" y="84" width="12" height="12" fill="#10764e" stroke="#0f172a" stroke-width="1" data-date="2019-01-06"><title>2019-01-06
 2 workouts
 Distance: 56.42 km
 Duration: 2h 53m
 Elevation: 326 m</title></rect>
-<rect x="14" y="0" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-07"><title>2019-01-07
+<rect x="14" y="0" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-07"><title>2019-01-07
 2 workouts
 Distance: 18.69 km
 Duration: 54m
 Elevation: 58 m</title></rect>
-<rect x="14" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-08"><title>2019-01-08
+<rect x="14" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-08"><title>2019-01-08
 2 workouts
 Distance: 18.47 km
 Duration: 53m
 Elevation: 59 m</title></rect>
-<rect x="14" y="28" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-09"><title>2019-01-09
+<rect x="14" y="28" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-09"><title>2019-01-09
 2 workouts
 Distance: 10.67 km
 Duration: 35m
 Elevation: 43 m</title></rect>
-<rect x="14" y="42" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-10"><title>2019-01-10
+<rect x="14" y="42" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-10"><title>2019-01-10
 2 workouts
 Distance: 18.63 km
 Duration: 58m
 Elevation: 60 m</title></rect>
-<rect x="14" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-11"><title>2019-01-11
+<rect x="14" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-11"><title>2019-01-11
 2 workouts
 Distance: 13.44 km
 Duration: 44m
 Elevation: 43 m</title></rect>
-<rect x="14" y="70" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-12"><title>2019-01-12
+<rect x="14" y="70" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-12"><title>2019-01-12
 1 workout
 Distance: 7.84 km
 Duration: 30m
@@ -88,27 +88,27 @@ Elevation: 42 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="28" y="0" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-14"><title>2019-01-14
+<rect x="28" y="0" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-14"><title>2019-01-14
 2 workouts
 Distance: 18.69 km
 Duration: 59m
 Elevation: 60 m</title></rect>
-<rect x="28" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-15"><title>2019-01-15
+<rect x="28" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-15"><title>2019-01-15
 2 workouts
 Distance: 14.00 km
 Duration: 43m
 Elevation: 44 m</title></rect>
-<rect x="28" y="28" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-16"><title>2019-01-16
+<rect x="28" y="28" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-16"><title>2019-01-16
 2 workouts
 Distance: 16.21 km
 Duration: 49m
 Elevation: 44 m</title></rect>
-<rect x="28" y="42" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-17"><title>2019-01-17
+<rect x="28" y="42" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-17"><title>2019-01-17
 2 workouts
 Distance: 19.65 km
 Duration: 1h 5m
 Elevation: 53 m</title></rect>
-<rect x="28" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-18"><title>2019-01-18
+<rect x="28" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-18"><title>2019-01-18
 2 workouts
 Distance: 15.34 km
 Duration: 48m
@@ -123,27 +123,27 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="42" y="0" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-21"><title>2019-01-21
+<rect x="42" y="0" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-21"><title>2019-01-21
 2 workouts
 Distance: 17.88 km
 Duration: 59m
 Elevation: 53 m</title></rect>
-<rect x="42" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-22"><title>2019-01-22
+<rect x="42" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-22"><title>2019-01-22
 2 workouts
 Distance: 18.76 km
 Duration: 58m
 Elevation: 61 m</title></rect>
-<rect x="42" y="28" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-23"><title>2019-01-23
+<rect x="42" y="28" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-23"><title>2019-01-23
 2 workouts
 Distance: 15.21 km
 Duration: 49m
 Elevation: 46 m</title></rect>
-<rect x="42" y="42" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-24"><title>2019-01-24
+<rect x="42" y="42" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-24"><title>2019-01-24
 2 workouts
 Distance: 12.80 km
 Duration: 40m
 Elevation: 41 m</title></rect>
-<rect x="42" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-25"><title>2019-01-25
+<rect x="42" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-25"><title>2019-01-25
 2 workouts
 Distance: 19.47 km
 Duration: 1h 9m
@@ -163,7 +163,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="56" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-01-29"><title>2019-01-29
+<rect x="56" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-01-29"><title>2019-01-29
 2 workouts
 Distance: 19.33 km
 Duration: 54m
@@ -213,7 +213,7 @@ Elevation: 0 m</title></rect>
 Distance: 20.58 km
 Duration: 1h 9m
 Elevation: 55 m</title></rect>
-<rect x="70" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-08"><title>2019-02-08
+<rect x="70" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-08"><title>2019-02-08
 2 workouts
 Distance: 19.63 km
 Duration: 1h 4m
@@ -223,12 +223,12 @@ Elevation: 45 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="70" y="84" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-10"><title>2019-02-10
+<rect x="70" y="84" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-10"><title>2019-02-10
 1 workout
 Distance: 13.68 km
 Duration: 52m
 Elevation: 54 m</title></rect>
-<rect x="84" y="0" width="12" height="12" fill="#0e5c45" stroke="#0f172a" stroke-width="1" data-date="2019-02-11"><title>2019-02-11
+<rect x="84" y="0" width="12" height="12" fill="#0c5038" stroke="#0f172a" stroke-width="1" data-date="2019-02-11"><title>2019-02-11
 2 workouts
 Distance: 31.76 km
 Duration: 1h 37m
@@ -243,12 +243,12 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="84" y="42" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-14"><title>2019-02-14
+<rect x="84" y="42" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-14"><title>2019-02-14
 2 workouts
 Distance: 19.66 km
 Duration: 1h 7m
 Elevation: 61 m</title></rect>
-<rect x="84" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-15"><title>2019-02-15
+<rect x="84" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-15"><title>2019-02-15
 1 workout
 Distance: 16.71 km
 Duration: 55m
@@ -283,12 +283,12 @@ Elevation: 0 m</title></rect>
 Distance: 20.55 km
 Duration: 1h 2m
 Elevation: 69 m</title></rect>
-<rect x="98" y="56" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-22"><title>2019-02-22
+<rect x="98" y="56" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-22"><title>2019-02-22
 2 workouts
 Distance: 15.54 km
 Duration: 46m
 Elevation: 44 m</title></rect>
-<rect x="98" y="70" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-02-23"><title>2019-02-23
+<rect x="98" y="70" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-02-23"><title>2019-02-23
 1 workout
 Distance: 13.15 km
 Duration: 42m
@@ -328,7 +328,7 @@ Elevation: 68 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="112" y="84" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-03"><title>2019-03-03
+<rect x="112" y="84" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-03"><title>2019-03-03
 2 workouts
 Distance: 15.54 km
 Duration: 52m
@@ -338,7 +338,7 @@ Elevation: 67 m</title></rect>
 Distance: 21.63 km
 Duration: 1h 17m
 Elevation: 71 m</title></rect>
-<rect x="126" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-05"><title>2019-03-05
+<rect x="126" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-05"><title>2019-03-05
 2 workouts
 Distance: 19.78 km
 Duration: 1h 6m
@@ -358,12 +358,12 @@ Elevation: 74 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="126" y="70" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-09"><title>2019-03-09
+<rect x="126" y="70" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-09"><title>2019-03-09
 1 workout
 Distance: 13.13 km
 Duration: 53m
 Elevation: 64 m</title></rect>
-<rect x="126" y="84" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-10"><title>2019-03-10
+<rect x="126" y="84" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-10"><title>2019-03-10
 2 workouts
 Distance: 11.89 km
 Duration: 42m
@@ -383,7 +383,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="140" y="42" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-14"><title>2019-03-14
+<rect x="140" y="42" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-14"><title>2019-03-14
 1 workout
 Distance: 15.81 km
 Duration: 44m
@@ -393,7 +393,7 @@ Elevation: 52 m</title></rect>
 Distance: 29.13 km
 Duration: 1h 31m
 Elevation: 105 m</title></rect>
-<rect x="140" y="70" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-16"><title>2019-03-16
+<rect x="140" y="70" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-16"><title>2019-03-16
 1 workout
 Distance: 13.76 km
 Duration: 1h 0m
@@ -403,7 +403,7 @@ Elevation: 64 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="154" y="0" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-18"><title>2019-03-18
+<rect x="154" y="0" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-18"><title>2019-03-18
 2 workouts
 Distance: 15.84 km
 Duration: 52m
@@ -413,7 +413,7 @@ Elevation: 53 m</title></rect>
 Distance: 21.29 km
 Duration: 1h 6m
 Elevation: 68 m</title></rect>
-<rect x="154" y="28" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-20"><title>2019-03-20
+<rect x="154" y="28" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-20"><title>2019-03-20
 2 workouts
 Distance: 15.84 km
 Duration: 47m
@@ -433,7 +433,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="154" y="84" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-03-24"><title>2019-03-24
+<rect x="154" y="84" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-03-24"><title>2019-03-24
 1 workout
 Distance: 7.46 km
 Duration: 26m
@@ -468,7 +468,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="168" y="84" width="12" height="12" fill="#0e5c45" stroke="#0f172a" stroke-width="1" data-date="2019-03-31"><title>2019-03-31
+<rect x="168" y="84" width="12" height="12" fill="#0e6343" stroke="#0f172a" stroke-width="1" data-date="2019-03-31"><title>2019-03-31
 1 workout
 Distance: 40.57 km
 Duration: 2h 26m
@@ -478,7 +478,7 @@ Elevation: 95 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="182" y="14" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-04-02"><title>2019-04-02
+<rect x="182" y="14" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-04-02"><title>2019-04-02
 1 workout
 Distance: 8.44 km
 Duration: 28m
@@ -503,7 +503,7 @@ Elevation: 66 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="182" y="84" width="12" height="12" fill="#0e5c45" stroke="#0f172a" stroke-width="1" data-date="2019-04-07"><title>2019-04-07
+<rect x="182" y="84" width="12" height="12" fill="#0e6343" stroke="#0f172a" stroke-width="1" data-date="2019-04-07"><title>2019-04-07
 2 workouts
 Distance: 40.02 km
 Duration: 2h 8m
@@ -523,7 +523,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="196" y="42" width="12" height="12" fill="#0e5c45" stroke="#0f172a" stroke-width="1" data-date="2019-04-11"><title>2019-04-11
+<rect x="196" y="42" width="12" height="12" fill="#0c5038" stroke="#0f172a" stroke-width="1" data-date="2019-04-11"><title>2019-04-11
 2 workouts
 Distance: 30.53 km
 Duration: 1h 36m
@@ -1623,7 +1623,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="630" y="84" width="12" height="12" fill="#0e5c45" stroke="#0f172a" stroke-width="1" data-date="2019-11-17"><title>2019-11-17
+<rect x="630" y="84" width="12" height="12" fill="#0e6343" stroke="#0f172a" stroke-width="1" data-date="2019-11-17"><title>2019-11-17
 1 workout
 Distance: 43.34 km
 Duration: 3h 0m
@@ -1768,7 +1768,7 @@ Elevation: 0 m</title></rect>
 Distance: 0.00 km
 Duration: 0m
 Elevation: 0 m</title></rect>
-<rect x="700" y="0" width="12" height="12" fill="#0a3d2d" stroke="#0f172a" stroke-width="1" data-date="2019-12-16"><title>2019-12-16
+<rect x="700" y="0" width="12" height="12" fill="#082a22" stroke="#0f172a" stroke-width="1" data-date="2019-12-16"><title>2019-12-16
 2 workouts
 Distance: 17.54 km
 Duration: 1h 3m
