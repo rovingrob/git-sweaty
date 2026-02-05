@@ -266,6 +266,8 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
   const grid = document.createElement("div");
   grid.className = "grid";
 
+  const weeklyTotals = {};
+
   for (let day = new Date(start); day <= end; day.setDate(day.getDate() + 1)) {
     const dateStr = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, "0")}-${String(day.getDate()).padStart(2, "0")}`;
     const inYear = day.getFullYear() === year;
@@ -279,6 +281,16 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
 
     const weekIndex = Math.floor((day - start) / (1000 * 60 * 60 * 24 * 7));
     const row = (day.getDay() + 6) % 7; // Monday=0
+
+    if (inYear) {
+      if (!weeklyTotals[weekIndex]) {
+        weeklyTotals[weekIndex] = { count: 0, distance: 0, moving_time: 0, elevation: 0 };
+      }
+      weeklyTotals[weekIndex].count += entry.count || 0;
+      weeklyTotals[weekIndex].distance += entry.distance || 0;
+      weeklyTotals[weekIndex].moving_time += entry.moving_time || 0;
+      weeklyTotals[weekIndex].elevation += entry.elevation_gain || 0;
+    }
 
     const cell = document.createElement("div");
     cell.className = "cell";
@@ -364,6 +376,30 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
   }
 
   heatmapArea.appendChild(grid);
+
+  const weeklyRow = document.createElement("div");
+  weeklyRow.className = "weekly-row";
+  weeklyRow.style.paddingLeft = `${layout.gridPadLeft}px`;
+  weeklyRow.style.gap = `${layout.gap}px`;
+
+  const numWeeks = Math.floor((end - start) / (1000 * 60 * 60 * 24 * 7)) + 1;
+  for (let w = 0; w < numWeeks; w++) {
+    const weekCell = document.createElement("div");
+    weekCell.className = "weekly-cell";
+    weekCell.style.width = `${layout.cell}px`;
+    const totals = weeklyTotals[w] || { count: 0, distance: 0, moving_time: 0, elevation: 0 };
+    if (totals.count > 0) {
+      const distDisplay = formatDistance(totals.distance, units);
+      const durationDisplay = formatDuration(totals.moving_time);
+      const elevDisplay = formatElevation(totals.elevation, units);
+      const distKm = units.distance === "km" ? totals.distance / 1000 : totals.distance / 1609.344;
+      weekCell.textContent = Math.round(distKm);
+      weekCell.title = `${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+    }
+    weeklyRow.appendChild(weekCell);
+  }
+  heatmapArea.appendChild(weeklyRow);
+
   return heatmapArea;
 }
 

@@ -272,7 +272,7 @@
       .heatmap-area {
         display: inline-grid;
         grid-template-columns: 36px max-content;
-        grid-template-rows: 18px auto;
+        grid-template-rows: 18px auto auto;
         column-gap: 8px;
         row-gap: 0;
         align-items: start;
@@ -356,6 +356,21 @@
       .cell.active {
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95), 0 0 16px rgba(56, 189, 248, 0.85);
         filter: brightness(1.2);
+      }
+
+      .weekly-row {
+        grid-column: 2;
+        grid-row: 3;
+        display: flex;
+        padding-top: 4px;
+      }
+
+      .weekly-cell {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8px;
+        color: var(--muted);
+        text-align: center;
+        overflow: hidden;
       }
 
       .tooltip {
@@ -444,7 +459,7 @@
         }
         .heatmap-area {
           grid-template-columns: 32px max-content;
-          grid-template-rows: 16px auto;
+          grid-template-rows: 16px auto auto;
         }
         .month-row {
           height: 16px;
@@ -490,6 +505,6 @@
 
     <div id="tooltip" class="tooltip"></div>
 
-    <script src="app.js?v=8"></script>
+    <script src="app.js?v=9"></script>
   </body>
 </html>
