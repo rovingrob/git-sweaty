@@ -1,8 +1,8 @@
-const DEFAULT_COLORS = ["#1f2937", "#374151", "#4b5563", "#6b7280", "#9ca3af"];
+const DEFAULT_COLORS = ["#1f2937", "#2d3748", "#3d4a5c", "#4d5b70", "#5d6c84", "#6d7d98", "#7d8eac", "#8d9fc0", "#9db0d4"];
 const TYPE_COLORS = {
-  Run: ["#1f2937", "#0a3d4d", "#0e5c6e", "#128a9e", "#01cdfe"],
-  Ride: ["#1f2937", "#0a3d2d", "#0e5c45", "#12a06a", "#05ffa1"],
-  WeightTraining: ["#1f2937", "#4d1a3d", "#7a2960", "#b84090", "#ff71ce"],
+  Run: ["#1f2937", "#082a35", "#0a3d4d", "#0c4f64", "#0e627c", "#107493", "#1287ab", "#149ac2", "#01cdfe"],
+  Ride: ["#1f2937", "#082a22", "#0a3d2d", "#0c5038", "#0e6343", "#10764e", "#128959", "#149c64", "#05ffa1"],
+  WeightTraining: ["#1f2937", "#3a1530", "#4d1a3d", "#60204a", "#732557", "#862b64", "#993071", "#ac367e", "#ff71ce"],
 };
 const MULTI_TYPE_COLOR = "#b967ff";
 
@@ -89,15 +89,16 @@ function getColors(type) {
 
 function distanceToLevel(distanceMeters, thresholds, unit) {
   if (!thresholds || Object.values(thresholds).every((v) => v === 0)) {
-    return distanceMeters > 0 ? 4 : 0;
+    return distanceMeters > 0 ? 8 : 0;
   }
 
   const distance = unit === "km" ? distanceMeters / 1000 : distanceMeters / 1609.344;
 
-  if (distance >= thresholds.level_4) return 4;
-  if (distance >= thresholds.level_3) return 3;
-  if (distance >= thresholds.level_2) return 2;
-  if (distance >= thresholds.level_1) return 1;
+  for (let level = 8; level >= 1; level--) {
+    if (distance >= (thresholds[`level_${level}`] || 0)) {
+      return level;
+    }
+  }
   if (distance > 0) return 1;
   return 0;
 }
@@ -212,7 +213,7 @@ function buildSummary(payload, types, years, showTypeBreakdown, showActiveDays, 
     value.className = "summary-type";
     const dot = document.createElement("span");
     dot.className = "summary-dot";
-    dot.style.background = getColors(type)[4];
+    dot.style.background = getColors(type)[8];
     const text = document.createElement("span");
     text.textContent = (typeTotals[type]?.count || 0).toLocaleString();
     value.appendChild(dot);

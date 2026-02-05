@@ -23,24 +23,36 @@ rate_limits:
 activities:
   types:
     - Ride
-  # Distance thresholds (in configured units) for color intensity levels 1-4
-  # Distances below level_1 get the darkest color; above level_4 get the brightest
+  # Distance thresholds (in configured units) for color intensity levels 1-8
+  # Distances below level_1 get the darkest color; above level_8 get the brightest
   distance_levels:
     Ride:
-      level_1: 15    # km - light
-      level_2: 30    # km - medium
-      level_3: 45    # km - bright
-      level_4: 55    # km - brightest
+      level_1: 10
+      level_2: 20
+      level_3: 30
+      level_4: 40
+      level_5: 50
+      level_6: 60
+      level_7: 80
+      level_8: 100
     Run:
-      level_1: 3     # km
-      level_2: 5     # km
-      level_3: 10    # km
-      level_4: 21    # km (half marathon)
+      level_1: 2
+      level_2: 4
+      level_3: 6
+      level_4: 8
+      level_5: 10
+      level_6: 15
+      level_7: 21
+      level_8: 42
     WeightTraining:
-      level_1: 0     # not distance-based, uses count
+      level_1: 0
       level_2: 0
       level_3: 0
       level_4: 0
+      level_5: 0
+      level_6: 0
+      level_7: 0
+      level_8: 0
   type_aliases:
     TrailRun: Run
     VirtualRun: Run
