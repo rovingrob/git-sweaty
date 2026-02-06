@@ -53,7 +53,13 @@ activities:
       level_6: 0
       level_7: 0
       level_8: 0
-  # Weekly distance thresholds for the weekly total row
+  # Weekly total row mode: "range" (color intensity) or "goal" (traffic light)
+  weekly_mode: "goal"
+  # Weekly distance goal (in configured units) for traffic light mode
+  weekly_goal:
+    Ride: 200
+    Run: 40
+  # Weekly distance thresholds for range mode
   weekly_distance_levels:
     Ride:
       level_1: 25

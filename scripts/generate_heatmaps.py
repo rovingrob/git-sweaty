@@ -239,6 +239,8 @@ def generate():
     types = activities_cfg.get("types", []) or []
     distance_levels = activities_cfg.get("distance_levels", {})
     weekly_distance_levels = activities_cfg.get("weekly_distance_levels", {})
+    weekly_mode = activities_cfg.get("weekly_mode", "range")
+    weekly_goal = activities_cfg.get("weekly_goal", {})
 
     units = config.get("units", {})
     units = {
@@ -275,6 +277,8 @@ def generate():
         "units": units,
         "distance_levels": distance_levels,
         "weekly_distance_levels": weekly_distance_levels,
+        "weekly_mode": weekly_mode,
+        "weekly_goal": weekly_goal,
     }
     _write_site_data(site_payload)
 

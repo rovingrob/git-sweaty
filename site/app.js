@@ -5,6 +5,7 @@ const TYPE_COLORS = {
   WeightTraining: ["#1f2937", "#3a1530", "#4d1a3d", "#60204a", "#732557", "#862b64", "#993071", "#ac367e", "#ff71ce"],
 };
 const MULTI_TYPE_COLOR = "#b967ff";
+const GOAL_COLORS = ["#1f2937", "#b91c1c", "#d97706", "#ca8a04", "#65a30d", "#16a34a"];
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -99,6 +100,18 @@ function distanceToLevel(distanceMeters, thresholds, unit) {
       return level;
     }
   }
+  if (distance > 0) return 1;
+  return 0;
+}
+
+function goalToLevel(distanceMeters, goalKm, unit) {
+  if (!goalKm || goalKm <= 0) return 0;
+  const distance = unit === "km" ? distanceMeters / 1000 : distanceMeters / 1609.344;
+  const pct = distance / goalKm;
+  if (pct >= 1.0) return 5;
+  if (pct >= 0.75) return 4;
+  if (pct >= 0.5) return 3;
+  if (pct >= 0.25) return 2;
   if (distance > 0) return 1;
   return 0;
 }
@@ -225,7 +238,7 @@ function buildSummary(payload, types, years, showTypeBreakdown, showActiveDays, 
   }
 }
 
-function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanceThresholds, weeklyThresholds, options = {}) {
+function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanceThresholds, weeklyThresholds, weeklyMode, weeklyGoal, options = {}) {
   const heatmapArea = document.createElement("div");
   heatmapArea.className = "heatmap-area";
 
@@ -391,7 +404,10 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
     const totals = weeklyTotals[w] || { count: 0, distance: 0, moving_time: 0, elevation: 0 };
     if (totals.count > 0) {
       let weekColor;
-      if (typeof options.weeklyColorForEntry === "function") {
+      if (weeklyMode === "goal" && weeklyGoal > 0) {
+        const level = goalToLevel(totals.distance, weeklyGoal, units.distance);
+        weekColor = GOAL_COLORS[level];
+      } else if (typeof options.weeklyColorForEntry === "function") {
         weekColor = options.weeklyColorForEntry(totals.distance);
       } else {
         const level = distanceToLevel(totals.distance, weeklyThresholds, units.distance);
@@ -401,7 +417,19 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
       const distDisplay = formatDistance(totals.distance, units);
       const durationDisplay = formatDuration(totals.moving_time);
       const elevDisplay = formatElevation(totals.elevation, units);
-      const tooltipText = `Week Total\n${totals.count} workout${totals.count === 1 ? "" : "s"}\nDistance: ${distDisplay}\nDuration: ${durationDisplay}\nElevation: ${elevDisplay}`;
+      const tooltipLines = [
+        "Week Total",
+        `${totals.count} workout${totals.count === 1 ? "" : "s"}`,
+        `Distance: ${distDisplay}`,
+        `Duration: ${durationDisplay}`,
+        `Elevation: ${elevDisplay}`,
+      ];
+      if (weeklyMode === "goal" && weeklyGoal > 0) {
+        const distVal = units.distance === "km" ? totals.distance / 1000 : totals.distance / 1609.344;
+        const pct = Math.round((distVal / weeklyGoal) * 100);
+        tooltipLines.push(`Goal: ${pct}% of ${weeklyGoal} ${units.distance}`);
+      }
+      const tooltipText = tooltipLines.join("\n");
 
       if (!isTouch) {
         weekCell.addEventListener("mouseenter", (event) => {
@@ -428,7 +456,7 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, distanc
   return heatmapArea;
 }
 
-function buildCard(type, year, aggregates, units, distanceLevels, weeklyDistanceLevels, options = {}) {
+function buildCard(type, year, aggregates, units, distanceLevels, weeklyDistanceLevels, weeklyMode, weeklyGoals, options = {}) {
   const card = document.createElement("div");
   card.className = "card";
 
@@ -444,7 +472,8 @@ function buildCard(type, year, aggregates, units, distanceLevels, weeklyDistance
   const layout = getLayout();
   const thresholds = type === "all" ? {} : (distanceLevels?.[type] || {});
   const weeklyThresholds = type === "all" ? {} : (weeklyDistanceLevels?.[type] || {});
-  const heatmapArea = buildHeatmapArea(aggregates, year, units, colors, type, layout, thresholds, weeklyThresholds, options);
+  const goalForType = type === "all" ? (weeklyGoals?.Ride || 0) : (weeklyGoals?.[type] || 0);
+  const heatmapArea = buildHeatmapArea(aggregates, year, units, colors, type, layout, thresholds, weeklyThresholds, weeklyMode, goalForType, options);
   body.appendChild(heatmapArea);
 
   const stats = document.createElement("div");
@@ -639,6 +668,8 @@ async function init() {
           payload.units || { distance: "mi", elevation: "ft" },
           payload.distance_levels || {},
           payload.weekly_distance_levels || {},
+          payload.weekly_mode || "range",
+          payload.weekly_goal || {},
           { colorForEntry, weeklyColorForEntry },
         );
         list.appendChild(card);
@@ -658,7 +689,7 @@ async function init() {
         list.className = "type-list";
         years.forEach((year) => {
           const aggregates = payload.aggregates?.[String(year)]?.[type] || {};
-          const card = buildCard(type, year, aggregates, payload.units || { distance: "mi", elevation: "ft" }, payload.distance_levels || {}, payload.weekly_distance_levels || {});
+          const card = buildCard(type, year, aggregates, payload.units || { distance: "mi", elevation: "ft" }, payload.distance_levels || {}, payload.weekly_distance_levels || {}, payload.weekly_mode || "range", payload.weekly_goal || {});
           list.appendChild(card);
         });
         if (!list.childElementCount) {
