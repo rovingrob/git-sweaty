@@ -12019,6 +12019,15 @@
           "distance": 43358.9,
           "elevation_gain": 97.0,
           "moving_time": 6691.0
+        },
+        "2026-10-18": {
+          "activity_ids": [
+            20627897722
+          ],
+          "count": 1,
+          "distance": 48774.9,
+          "elevation_gain": 219.0,
+          "moving_time": 8404.0
         }
       }
     }
@@ -12055,7 +12064,7 @@
       "level_8": 0
     }
   },
-  "generated_at": "2026-10-17T10:11:15.870838+00:00",
+  "generated_at": "2026-10-18T10:26:52.354220+00:00",
   "types": [
     "Ride"
   ],
